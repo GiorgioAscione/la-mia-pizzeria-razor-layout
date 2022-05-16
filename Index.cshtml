@@ -1,0 +1,50 @@
+﻿
+#include <cstdlib>
+
+@{
+    string mioNome = "Giorgio";
+    string mioCognome = "Ascione";
+}
+<h2>Il mio nome è: @mioNome e il mio cognome è: @mioCognome</h2>
+
+@{
+    int n = 9;
+    for (int i = 1; i <= 9; i++)
+    {
+      <span>@i</span>  
+    }
+}
+
+@{
+    string frase = "nel mezzo del cammin di nostra vita";
+    int n_a = 0;
+
+    foreach (char temp in frase)
+    {
+        if (temp.ToString() == "a")
+        {
+            n_a++;
+        }
+    }
+
+    <p>@n_a</p>
+}
+
+    @{
+        List<int> listaNumeri;
+
+        Random rand = new Random();
+
+        int size = 20;
+        for (int i = 1; i <= size; i++)
+        {
+            int temp = rand.Next(90);
+            if (temp >= size && temp <= 70)
+            {
+                <span>@temp</span>
+            }
+        }
+    }
+
+
+
